@@ -11,6 +11,47 @@ body {
     color: white;
 }
 
+.welcome-page {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    letter-spacing: 0.5rem;
+    font-size: xx-large;
+    background-color: black;
+    text-shadow: 0 0 1.5rem whitesmoke;
+}
+
+.welcome-text {
+    animation: scalling 6s ease;
+}
+
+@keyframes scalling {
+    0% {
+        transform: scale(0);
+    }
+
+    25%{
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+
+}
+
 header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -37,17 +78,22 @@ header {
 
 .profile .img-container {
     height: 3rem;
+    border-radius: 0.2rem;
     overflow: hidden;
 }
 
 .img-container .profile-img {
     height: 3rem;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     cursor: pointer;
 }
 
 .profile-img:hover {
     scale: 1.2;
+}
+
+h1 {
+    color: whitesmoke;
 }
 
 nav {
@@ -64,7 +110,6 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* gap: 3rem; */
 }
 
 li {
@@ -72,6 +117,15 @@ li {
 }
 
 li a {
+    display: inline-block;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
     text-decoration: none;
     color: whitesmoke;
+}
+
+a:hover {
+    border: 0.1rem solid rgb(114, 108, 108);
+    background-color: rgba(182, 170, 170, 0.026);
+    transform: scale(1.1);
 }
