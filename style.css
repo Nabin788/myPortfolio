@@ -5,240 +5,72 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.803);
     font-family: 'roboto', sans-serif;
     text-transform: capitalize;
     color: white;
 }
 
-.portfolio-img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.portfolio-img:hover {
-    scale: 1.2;
-}
-
 header {
-    padding: 0.5rem 2rem 0.5rem 2rem;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    gap: 1rem;
-    border: 0.01rem solid white;
-    border-radius: 1rem 1rem 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 0.5rem;
+    padding: 0.3rem;
+    border: 0.01rem solid rgb(222, 219, 219);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-    background-color: transparent;
+    background: rgba(4, 67, 90, 0.941);
 }
 
-.img-container {
+.profile {
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gray;
-    overflow: hidden;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-}
-
-.header-logo {
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 0.1rem;
-}
-
-h1,
-a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-weight: lighter;
-}
-
-.navbar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
-}
-
-.nav-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.auth-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: end;
-}
-
-li {
-    padding: 0.2rem;
-    list-style: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.icon {
-    position: absolute;
-    top: -0.7rem;
-    right: 0.8rem;
-    height: 3rem;
-    filter: drop-shadow(0 0 0.4rem rgb(21, 0, 0));
-    filter: brightness(85%);
-    border-radius: 0.2rem;
-    width: 3rem;
-
-    padding: 0.5rem;
-}
-
-.icon:hover {
-    scale: 1.1;
     border: 0.1rem solid whitesmoke;
     border-radius: 0.5rem;
-}
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
-li a {
-    display: inline-block;
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-li a p::before {
-    content: "";
-    position: absolute;
-    bottom: 0.1rem;
-    width: 0%;
-    border-bottom: 0.1rem solid rgba(250, 247, 247, 0.874);
-    transition: all 0.5s linear;
-}
-
-li a p:hover::before {
-    width: 100%;
-}
-
-p {
-    position: absolute;
-    text-align: center;
-    left: -3.5rem;
-    top: 2.6rem;
-    border-radius: 0.2rem;
-    font-size: 0.8rem;
-    padding: 0.2rem;
-    background-color: rgb(166, 165, 169);
-}
-
-.home,
-.about,
-.login,
-.contact,
-.project {
-    display: none;
-}
-
-
-.about {
-    width: 4.5rem;
-    left: -4.1rem;
-}
-
-.home,
-.login {
-    left: -3.1rem;
-}
-
-.hamburger-list {
-    position: absolute;
-    top: 1.5rem;
-    right: 2.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-.hamburger-menu {
-    cursor: pointer;
-    border: 0.1rem solid rgb(221, 215, 215);
-    width: 1.5rem;
-    margin-top: 0.28rem;
-    border-radius: 1rem;
-}
-
-@media screen and (max-width: 1000px) {
-    .navbar {
-        display: none;
-    }
-
-    p {
-        left: -6.9rem;
-        top: 0.8rem;
-    }
-
-    .about {
-        left: -8rem;
-    }
-
-    .home,
-    .login {
-        left: -6.1rem;
-    }
-
-    .hamburger-list {
-        display: block;
-    }
-
-    .header-logo {
-        width: 18rem;
-        display: flex;
-        align-items: center;
-        gap: 0.1rem;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .icon {
-        width: 3rem;
+    .img-container {
         height: 3rem;
-        padding: 0.5rem;
-    }
+        overflow: hidden;
 
-    .icon:hover {
-        border: 0.1rem solid white;
-        border-radius: 10%;
-        background-color: transparent;
-    }
+        & .profile-img {
+            height: 3rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
 
-    .navbar::before {
-        content: "";
-        border-inline: 0.1rem solid white;
-        border-bottom: 0.1rem solid white;
-        border-radius: 1rem;
-        background-color: transparent;
-        width: 6rem;
-        height: 27rem;
-        position: absolute;
-        right: 0.01rem;
-        top: -0.01rem;
+            &:hover {
+                scale: 1.2;
+            }
+        }
     }
+}
+
+nav {
+    background-color: transparent;
+    border: 0.1rem solid whitesmoke;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: flex;
+    justify-content: center;
 
     .nav-list {
-        position: absolute;
-        top: 5.5rem;
-        right: 1rem;
-        flex-direction: column;
-        gap: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        li {
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
     }
-
-    .auth-list {
-        position: absolute;
-        top: 23rem;
-        right: 1rem;
-    }
-
-
 }
