@@ -211,13 +211,12 @@ footer {
     flex-wrap: wrap;
     gap: 1rem;
     margin: 1rem;
+}
 
-    & a {
-        padding: 0.5rem;
-        border-radius: 0.4rem;
-        filter:grayscale();
-    }
-
+.social-media a{
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    filter:grayscale();
 }
 
 .social-media a:hover {
