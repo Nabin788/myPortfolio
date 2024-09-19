@@ -4,7 +4,7 @@ const welcomeUser = () => {
     setTimeout(() => {
         loadingPahe.style.display = "none"
         sessionStorage.setItem("visited", "true");
-    }, 5000);
+    }, 3000);
 }
 const hideVisitedPage = () => {
     loadingPahe.style.display = "none";
