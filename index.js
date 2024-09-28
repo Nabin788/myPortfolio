@@ -1,19 +1,31 @@
 const express = require("express");
-const path = require("path");
+require("dotenv").config();
+const mail = require("./controller/mail.js");
+const bodyParser = require("body-parser");
+const cors = require('cors');
+
 
 const app = express();
-const port = 1000;
 
-const html = path.join(__dirname, "./views/html");
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+const port = process.env.PORT || 1000;
 
 app.use(express.static("views"));
 app.set("view engine", "hbs");
-app.set("views", html);
 
-app.get("/", (req,res) => {
+// Routes
+app.get("*", (req, res) => {
     res.render("index");
 });
 
+app.post("/send", (req,res) =>{
+    mail(req,res);
+
+});
+
+// Start Server
 app.listen(port, () => {
-    console.log(`Server is listening from: http://localhost:${port}`);
+    console.log(`Server is listening on: http://localhost:${port}`);
 });
