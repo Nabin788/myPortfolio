@@ -4,7 +4,7 @@ const EMAIL = process.env.EMAIL;
 const PASSWORD = process.env.PASSWORD;
 
 const maileSend = (req, res) => {
-    const { name, email, message } = req.body;
+    const { name, email, subject, message } = req.body;
     const mail = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,
@@ -18,7 +18,9 @@ const maileSend = (req, res) => {
     const mailContent = {
         from: process.env.EMAIL,
         to: email,
-        text: `${name}: ${message}`
+        subject: subject,
+        html: <h1>${name}</h1>,
+        text: <p>${message}</p>
     }
 
     mail.sendMail(mailContent, (err, sucess) => {
