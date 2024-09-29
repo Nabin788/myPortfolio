@@ -16,6 +16,14 @@ const navbar = (url) => {
     elements.home.style.display = "none";
     elements.about.style.display = "none";
 
+    // Set the active class based on the current URL
+    document.querySelectorAll(".nav-list a").forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute('href') === url) {
+            link.classList.add("active");
+        }
+    });
+
     switch (url) {
         case "/home":
             elements.home.style.display = "grid";
@@ -34,6 +42,8 @@ const navbar = (url) => {
             document.title = "contact - Portfolio"
             break;
         default:
+            elements.home.style.display = "grid";
+
             break;
     }
 }
@@ -45,12 +55,6 @@ const handleNavbar = (event) => {
     if (!url) {
         return;
     }
-
-    // Remove active class from all links and add it to the clicked link
-    document.querySelectorAll(".nav-list a").forEach(link => {
-        link.classList.remove("active");
-    });
-    event.target.classList.add("active");
 
     // Update URL without reloading the page
     history.pushState({}, "", url);
