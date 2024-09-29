@@ -3,26 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-    <meta name="description" content="Nabin Poudel Portfolio website.">
-    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nabin Poudel - A passionate web developer with expertise in JavaScript, Node.js, and MongoDB. Explore my portfolio to see my projects and skills.">
+    <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nabin Poudel</title>
-    <link rel="stylesheet" href="./style/style.css">
+
+    <title>Nabin Poudel | Web Developer Portfolio</title>
+
+    <link rel="icon" href="./icons/favicon.png" type="image/png">
+
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style/style.css">
+    <noscript>
+        <link rel="stylesheet" href="/style/style.css">
+    </noscript>
 </head>
 
-<body>
 
+
+<body>
     <!-- page header -->
     <header>
         <div class="profile">
             <picture class="img-container">
-                <img class="profile-img" src="./../icons/nabin.webp" alt="Loading.." loading="lazy">
+                <a href="/"><img class="profile-img" src="./../icons/nabin.webp" alt="Loading.." loading="lazy"></a>
             </picture>
             <h1>Nabin Poudel</h1>
         </div>
@@ -30,7 +41,7 @@
             <ul class="nav-list">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/about">About me</a></li>
-                <li><a href="/project">Projects</a></li>
+                <li><a href="/project">Portfolio</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
@@ -48,7 +59,7 @@
         <div class="myInfo-container">
             <div class="my-info">
                 <div class="info">
-                    <p>Hello, It's Me</p>
+                    <p>Hello, I'm</p>
                     <h2>Nabin Poudel</h2>
                     <p class="textTyping">and I'm a Software Developer</p>
                 </div>
@@ -131,15 +142,18 @@
                 <form class="form" action="/send" method="POST">
                     <div class="name-email">
                         <div class="name">
+                            <label for="name"></label>
                             <input type="text" id="name" name="name" class="nameEmail" placeholder="Enter Your Name"
                                 autocomplete="name" required>
                         </div>
                         <div class="email">
+                            <label for="email"></label>
                             <input type="email" id="email" name="email" class="nameEmail"
                                 placeholder="Enter Your Email or Phone number" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="contact-subject">
+                        <label for="subject"></label>
                         <input type="text" id="subject" name="subject" class="subject"
                             placeholder="why you want to contact" required>
                     </div>
@@ -167,7 +181,7 @@
     </footer>
     <!-- footer section -->
 
-    <script src="./js/index.js" defer></script>
+    <script src="./js/index.js" defer type="text/javascript"></script>
 </body>
 
 </html>

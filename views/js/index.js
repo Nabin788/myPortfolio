@@ -6,34 +6,32 @@ const elements = {
     projectList: document.querySelector(".project-list"),
     contact: document.getElementById("contact"),
     about: document.getElementById("about"),
-    aboutBtn: document.querySelector(".about-btn")
+    aboutBtn: document.querySelector(".about-btn"),
 }
 
 const navbar = (url) => {
+
+    elements.contact.style.display = "none";
+    elements.projectSection.style.display = "none";
+    elements.home.style.display = "none";
+    elements.about.style.display = "none";
+
     switch (url) {
         case "/home":
             elements.home.style.display = "grid";
-            elements.contact.style.display = "none";
-            elements.projectSection.style.display = "none";
-            elements.about.style.display = "none";
+            document.title = "home - Portfolio"
             break;
         case "/about":
             elements.about.style.display = "block";
-            elements.projectSection.style.display = "none";
-            elements.contact.style.display = "none";
-            elements.home.style.display = "none";
+            document.title = "about - Portfolio"
             break;
         case "/project":
             elements.projectSection.style.display = "block";
-            elements.home.style.display = "none";
-            elements.about.style.display = "none";
-            elements.contact.style.display = "none";
+            document.title = "project - Portfolio"
             break;
         case "/contact":
-            elements.contact.style.display = "block";
-            elements.projectSection.style.display = "none";
-            elements.home.style.display = "none";
-            elements.about.style.display = "none";
+            elements.contact.style.display = "flex";
+            document.title = "contact - Portfolio"
             break;
         default:
             break;
@@ -41,11 +39,18 @@ const navbar = (url) => {
 }
 
 const handleNavbar = (event) => {
+
     event.preventDefault();
     const url = event.target.getAttribute('href');
     if (!url) {
         return;
     }
+
+    // Remove active class from all links and add it to the clicked link
+    document.querySelectorAll(".nav-list a").forEach(link => {
+        link.classList.remove("active");
+    });
+    event.target.classList.add("active");
 
     // Update URL without reloading the page
     history.pushState({}, "", url);

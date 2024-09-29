@@ -135,7 +135,7 @@ nav {
 .nav-list li a {
     display: inline-block;
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
     text-decoration: none;
     color: whitesmoke;
     border-block-end: 1px solid whitesmoke;
@@ -150,14 +150,14 @@ nav {
     border-width: 1px;
 }
 
-.nav-link {
-    position: relative;
-}
-
-.nav-link::after {
+.nav-list li a.active {
     content: "";
-    position: absolute;
-
+    border-radius: 0.5rem;
+    background-color: rgba(182, 170, 170, 0.1);
+    transform: scale(1.1);
+    border-width: 1px;
+    color: blue;
+    border-bottom: 3px solid blue;
 }
 
 /* header */
@@ -243,7 +243,7 @@ h2 {
 
     25%,
     75% {
-        width: 24.5ch;
+        width: 24ch;
     }
 }
 
@@ -303,15 +303,11 @@ span {
 
 /* contact-section */
 .section-contact {
-    padding: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    width: 100%;
-    min-width: 10rem;
-    padding: 2.56rem;
-    margin-top: auto;
     border: 1px solid whitesmoke;
     border-radius: 0.5rem;
     backdrop-filter: blur(0.5rem);
@@ -374,10 +370,9 @@ span {
     gap: 1rem;
 }
 
-.nameEmail, .subject {
-    border-bottom: 5px solid whitesmoke;
-    border-inline: 0 solid transparent;
-    border-top: 0 solid transparent;
+.nameEmail,
+.subject {
+    border: 1px solid whitesmoke;
     text-align: center;
     border-radius: 1rem;
     padding: 0.3rem;

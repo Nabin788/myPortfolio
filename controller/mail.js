@@ -16,11 +16,12 @@ const maileSend = (req, res) => {
     });
 
     const mailContent = {
-        from: process.env.EMAIL,
-        to: email,
+        from:`${name} <${email}>`,
+        to: process.env.EMAIL,
         subject: subject,
         html: `<h1>${name}</h1>`,
-        text: `<p>${message}</p>`
+        text: `<p>${message}</p>`,
+        replyTo : email
     }
 
     mail.sendMail(mailContent, (err, sucess) => {
