@@ -19,8 +19,8 @@ const maileSend = (req, res) => {
         from: process.env.EMAIL,
         to: email,
         subject: subject,
-        html: <h1>${name}</h1>,
-        text: <p>${message}</p>
+        html: `<h1>${name}</h1>`,
+        text: `<p>${message}</p>`
     }
 
     mail.sendMail(mailContent, (err, sucess) => {
