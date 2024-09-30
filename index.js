@@ -15,14 +15,20 @@ app.use(express.static("views"));
 app.set("view engine", "hbs");
 
 // Routes
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.render("index");
 });
 
 app.post("/send", (req,res) =>{
     mail(req,res);
-
 });
+
+// 404 Error handling
+app.use((req, res) => {
+    res.status(404).send("Page not found");
+});
+
+
 
 // Start Server
 app.listen(port, () => {
