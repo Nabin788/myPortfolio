@@ -15,7 +15,7 @@ const maileSend = async (req, res) => {
             }
         });
         const mailContent = {
-            from: `${email} ${name}`,
+            from: `${name} <${email}>`,
             to: process.env.EMAIL,
             subject: "Inquiry",
             html: `<h1>Message from ${name}:</h1><strong>${message}</strong>`,
