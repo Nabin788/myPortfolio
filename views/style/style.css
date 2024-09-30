@@ -74,6 +74,10 @@ header {
     gap: 0.5rem;
     padding: 0.3rem;
     border: 1px solid rgb(222, 219, 219);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
 }
 
 .profile {
@@ -165,13 +169,13 @@ nav {
 /* home section */
 .home-section {
     background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.264), rgba(0, 0, 0, 0.473));
-    flex-grow: 1;
     border: 1px solid white;
     backdrop-filter: blur(1rem);
     padding: 0.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1rem;
+    flex-grow: 1;
 }
 
 .my-img {
@@ -243,7 +247,7 @@ h2 {
 
     25%,
     75% {
-        width: 24ch;
+        width: 23.9ch;
     }
 }
 
@@ -312,7 +316,6 @@ span {
     border-radius: 0.5rem;
     backdrop-filter: blur(0.5rem);
     box-shadow: var(--box-shadow);
-    display: none;
 }
 
 .contact-container {
@@ -325,11 +328,9 @@ span {
     min-width: 10rem;
 }
 
-.contact-form {
-    margin-bottom: 0.5rem;
-}
-
 .form {
+    background-color: rgba(17, 8, 79, 0.46);
+    flex-grow: 1;
     border: 1px solid wheat;
     border-radius: 1rem;
     margin-top: 1rem;
@@ -340,7 +341,7 @@ span {
     flex-wrap: wrap;
     gap: 1rem;
     height: 27rem;
-    width: 100%;
+    min-width: 100%;
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(0.5rem);
 }
@@ -417,6 +418,14 @@ textarea::placeholder,
     transition: transform 0.3s ease;
 }
 
+#submit-btn{
+    display: none;
+}
+
+.toast {
+
+}
+
 .contact-map {
     width: 40%;
     max-width: 400rem;
@@ -428,9 +437,9 @@ textarea::placeholder,
 }
 
 iframe {
-    border-radius: 1rem;
-    width: 100%;
-    height: 26rem;
+    border-radius: 5rem;
+    width: 30rem;
+    height: 30rem;
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(1rem);
 }
@@ -449,12 +458,37 @@ iframe {
 }
 
 .sourceCode {
+    background-color: rgb(21, 5, 50);
+    position: fixed;
+    top: 50%;
     height: 3rem;
+    border-radius: 0 1rem 1rem 0 ;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
     gap: 0.5rem;
+    overflow: hidden;
+    width: 8rem;
+    animation: blick 0.5s linear infinite;
+}
+
+@keyframes blick {
+    from{
+    }
+    to{
+        border: 1px solid white;
+        box-shadow: 0 0 0.5rem whitesmoke;
+    }
+}
+
+.sourceCode:hover{
+    width: 20rem;
+    animation: none;
+}
+
+.sourceCode:hover h4{
+    display: block;
 }
 
 .sourceCode a {
@@ -465,6 +499,7 @@ iframe {
 h4 {
     font-size: x-large;
     padding: 0.3rem;
+    display: none;
 }
 
 .source-icon {
@@ -551,6 +586,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     backdrop-filter: blur(1rem);
     border-radius: 0 0 .5rem 0;
@@ -646,6 +682,11 @@ footer p {
         height: 10rem;
         border-radius: 1rem;
         transition: transform 0.3s ease;
+    }
+
+    .sourceCode {
+        top: 8rem;
+        width: 5rem;
     }
 
     .section-contact {

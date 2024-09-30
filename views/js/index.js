@@ -7,14 +7,11 @@ const elements = {
     contact: document.getElementById("contact"),
     about: document.getElementById("about"),
     aboutBtn: document.querySelector(".about-btn"),
+    contactBtn: document.getElementById("submit-btn"),
+    sourceCode : document.querySelector(".sourceCode")
 }
 
 const navbar = (url) => {
-
-    elements.contact.style.display = "none";
-    elements.projectSection.style.display = "none";
-    elements.home.style.display = "none";
-    elements.about.style.display = "none";
 
     // Set the active class based on the current URL
     document.querySelectorAll(".nav-list a").forEach(link => {
@@ -23,6 +20,11 @@ const navbar = (url) => {
             link.classList.add("active");
         }
     });
+
+    elements.projectSection.style.display = "none";
+    elements.contact.style.display = "none";
+    elements.home.style.display = "none";
+    elements.about.style.display = "none";
 
     switch (url) {
         case "/home":
@@ -35,7 +37,7 @@ const navbar = (url) => {
             break;
         case "/project":
             elements.projectSection.style.display = "block";
-            document.title = "project - Portfolio"
+            document.title = "project - Portfolio";
             break;
         case "/contact":
             elements.contact.style.display = "flex";
@@ -93,6 +95,36 @@ window.addEventListener("popstate", () => {
 window.addEventListener("DOMContentLoaded", () => {
     navbar(window.location.pathname);
 });
+
+const formValid = () => {
+    const userName = document.getElementById("name");
+    const userEmail = document.getElementById("email");
+
+    const checkValue = () => {
+
+        const userValue = userName.value;
+        const emailValue = userEmail.value;
+        if (userValue && emailValue) {
+            elements.contactBtn.style.display = "flex";
+        } else {
+            elements.contactBtn.style.display = "none";
+
+        }
+    }
+
+    userName.addEventListener("input", checkValue);
+    userEmail.addEventListener("input", checkValue);
+
+    const submitForm = () => {
+        const toast = document.createElement("div");
+        toast.classList.add("notify");
+        document.body.appendChild(toast);
+    }
+
+    elements.contactBtn.addEventListener("click", submitForm);
+}
+formValid();
+
 
 elements.navlist.addEventListener("click", handleNavbar);
 
