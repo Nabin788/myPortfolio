@@ -26,47 +26,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.welcome-page {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    letter-spacing: 0.5rem;
-    font-size: xx-large;
-    text-shadow: 0 0 1.5rem whitesmoke;
-    background-color: black;
-}
-
-.welcome-text {
-    animation: scalling 3s ease;
-}
-
-@keyframes scalling {
-    0% {
-        transform: scale(0);
-    }
-
-    25% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1);
-    }
-
-    75% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(0);
-    }
-
-}
-
 /* header */
 header {
     display: grid;
@@ -74,10 +33,6 @@ header {
     gap: 0.5rem;
     padding: 0.3rem;
     border: 1px solid rgb(222, 219, 219);
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-
 }
 
 .profile {

@@ -1,15 +1,14 @@
 const express = require("express");
 require("dotenv").config();
 const mail = require("./controller/mail.js");
-const bodyParser = require("body-parser");
 const cors = require('cors');
 
 
 const app = express();
 
 app.use(cors({origin: "*"}));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 const port = process.env.PORT || 1000;
 
 app.use(express.static("views"));
