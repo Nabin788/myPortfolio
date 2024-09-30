@@ -5,7 +5,6 @@ const elements = {
     projectSection: document.getElementById("project-section"),
     projectList: document.querySelector(".project-list"),
     contact: document.getElementById("contact"),
-    about: document.getElementById("about"),
     aboutBtn: document.querySelector(".about-btn"),
     contactBtn: document.getElementById("submit-btn"),
     sourceCode : document.querySelector(".sourceCode")
@@ -24,16 +23,11 @@ const navbar = (url) => {
     elements.projectSection.style.display = "none";
     elements.contact.style.display = "none";
     elements.home.style.display = "none";
-    elements.about.style.display = "none";
 
     switch (url) {
         case "/home":
             elements.home.style.display = "grid";
             document.title = "home - Portfolio"
-            break;
-        case "/about":
-            elements.about.style.display = "block";
-            document.title = "about - Portfolio"
             break;
         case "/project":
             elements.projectSection.style.display = "block";
@@ -45,7 +39,6 @@ const navbar = (url) => {
             break;
         default:
             elements.home.style.display = "grid";
-
             break;
     }
 }
@@ -62,12 +55,6 @@ const handleNavbar = (event) => {
     history.pushState({}, "", url);
     navbar(url);
 }
-
-// Show about section on button click
-elements.aboutBtn.addEventListener("click", () => {
-    history.pushState({}, "", "/about");
-    navbar("/about");
-});
 
 const projectItems = async () => {
     const api = await fetch("../project.json");
