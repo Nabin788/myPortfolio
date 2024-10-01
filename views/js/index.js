@@ -29,7 +29,7 @@ const navbar = (url) => {
             elements.home.style.display = "grid";
             document.title = "home - Portfolio"
             break;
-        case "/project":
+        case "/portfolio":
             elements.projectSection.style.display = "block";
             document.title = "project - Portfolio";
             break;

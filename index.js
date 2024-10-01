@@ -3,10 +3,9 @@ require("dotenv").config();
 const mail = require("./controller/mail.js");
 const cors = require('cors');
 
-
 const app = express();
 
-app.use(cors({origin: "*"}));
+app.use(cors({ origin: "*" }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 const port = process.env.PORT || 1000;
@@ -14,21 +13,23 @@ const port = process.env.PORT || 1000;
 app.use(express.static("views"));
 app.set("view engine", "hbs");
 
+app.post("/send", (req, res) => {
+    mail(req, res);
+});
+
 // Routes
 app.get("*", (req, res) => {
-    res.render("index");
+    // Define your SPA routes
+    const spaRoutes = ["/", "/home", "/portfolio", "/contact"];
+
+    if (spaRoutes.includes(req.path)) {
+        // Render index.hbs for SPA routes
+        res.render("index");
+    } else {
+        // Send 404 for all other routes
+        res.status(404).send("404 Page not found");
+    }
 });
-
-app.post("/send", (req,res) =>{
-    mail(req,res);
-});
-
-// 404 Error handling
-app.use((req, res) => {
-    res.status(404).send("Page not found");
-});
-
-
 
 // Start Server
 app.listen(port, () => {
