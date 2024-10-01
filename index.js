@@ -15,7 +15,7 @@ app.use(express.static("views"));
 app.set("view engine", "hbs");
 
 // Routes
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
     res.render("index");
 });
 
