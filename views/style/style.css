@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     height: 100vh;
     background-image: url(../icons/background.webp);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
 }
 
@@ -275,15 +275,16 @@ span {
 .contact-container {
     border-radius: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     min-width: 10rem;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .form {
-    background-color: rgba(17, 8, 79, 0.46);
     flex-grow: 1;
     border: 1px solid wheat;
     border-radius: 1rem;
@@ -372,7 +373,7 @@ textarea::placeholder,
     transition: transform 0.3s ease;
 }
 
-#submit-btn{
+#submit-btn {
     display: none;
 }
 
@@ -408,11 +409,10 @@ iframe {
 }
 
 .sourceCode {
-    background-color: rgb(21, 5, 50);
     position: fixed;
     top: 50%;
     height: 3rem;
-    border-radius: 0 1rem 1rem 0 ;
+    border-radius: 0 1rem 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,23 +421,26 @@ iframe {
     overflow: hidden;
     width: 8rem;
     animation: blick 0.5s linear infinite;
+    backdrop-filter: blur(1rem);
+    border: 1px solid white;
+    z-index: 2;
 }
 
 @keyframes blick {
-    from{
-    }
-    to{
-        border: 1px solid white;
+    from {}
+
+    to {
+        border: 2px solid white;
         box-shadow: 0 0 0.5rem whitesmoke;
     }
 }
 
-.sourceCode:hover{
+.sourceCode:hover {
     width: 20rem;
     animation: none;
 }
 
-.sourceCode:hover h4{
+.sourceCode:hover h4 {
     display: block;
 }
 
@@ -603,13 +606,26 @@ h4 {
 }
  */
 
- ins{
+.adsbygoogle {
+    width: 10rem;
+    top: 5rem;
+    position: fixed;
     margin: 1rem;
-    display: flex;
-    justify-content: center;
-    flex: wrap;
-    display: none;
- }
+    flex-wrap: wrap;
+    animation: sliding 5s linear;
+}
+
+@keyframes sliding {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
 
 footer {
     border: 1px solid whitesmoke;
@@ -654,5 +670,4 @@ footer p {
     .contact-container {
         gap: 1rem;
     }
-
 }

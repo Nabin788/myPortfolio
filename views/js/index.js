@@ -7,7 +7,7 @@ const elements = {
     contact: document.getElementById("contact"),
     aboutBtn: document.querySelector(".about-btn"),
     contactBtn: document.getElementById("submit-btn"),
-    sourceCode : document.querySelector(".sourceCode")
+    sourceCode: document.querySelector(".sourceCode"),
 }
 
 const navbar = (url) => {
