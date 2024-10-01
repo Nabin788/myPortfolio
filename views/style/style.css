@@ -675,7 +675,8 @@ footer p {
 
 @media only screen and (max-width: 1240px) {
     .adsbygoogle {
-        width: 100%;
-        top: 16rem;
+        background-color: red;
+        width: 10rem;
+        top: 33rem;
     }
 }
