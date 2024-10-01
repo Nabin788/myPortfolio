@@ -20,7 +20,7 @@ app.post("/send", (req, res) => {
 // Routes
 app.get("*", (req, res) => {
     // Define your SPA routes
-    const spaRoutes = ["/", "/home", "/portfolio", "/contact"];
+    const spaRoutes = ["/", "/home", "/about" , "/portfolio", "/contact"];
 
     if (spaRoutes.includes(req.path)) {
         // Render index.hbs for SPA routes

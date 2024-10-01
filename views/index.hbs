@@ -33,6 +33,17 @@
         <link rel="stylesheet" href="/style/style.css">
     </noscript>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2ND8B43NF">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2ND8B43NF');
+    </script>
+
     <!-- add blocking msg frm adsen -->
     <script async src="https://fundingchoicesmessages.google.com/i/pub-6901656236375995?ers=1"></script>
     <script>(function () { function signalGooglefcPresent() { if (!window.frames['googlefcPresent']) { if (document.body) { const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe); } else { setTimeout(signalGooglefcPresent, 0); } } } signalGooglefcPresent(); })();</script>
@@ -123,8 +134,9 @@
         <nav>
             <ul class="nav-list">
                 <li><a href="/home">Home</a></li>
+                <li><a href="/about">about me</a></li>
                 <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/contact">Contact me</a></li>
             </ul>
         </nav>
     </header>
@@ -173,6 +185,64 @@
         </div>
     </section>
     <!-- Home section -->
+
+    <!-- about section -->
+    <section class="about-section" id="about-section">
+        <div class="introduction">
+            <h3>About me</h3>
+            <p>Hello! I'm Nabin Poudel, a passionate web developer with a solid foundation in frontend and backend
+                technologies. I hold a Bachelor of Computer Applications (BCA) from LA Grandee International College,
+                affiliated with Pokhara University. Over the years, I’ve developed a keen interest in creating
+                user-friendly, dynamic web applications.
+                I’m skilled in building responsive websites, working with APIs, and integrating third-party services
+                like payment gateways. Some of my notable projects include an my portfolio website and a weather app,
+                showcasing my ability to deliver functional and aesthetically pleasing solutions.
+                I’m always excited to take on new challenges, learn new technologies, and create impactful digital
+                experiences. Let’s build something amazing together!.</p>
+        </div>
+        <div class="skills">
+            <h4>Skills</h4>
+            <div class="front-end">
+                <p>FrontEnd</p>
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+            </div>
+
+            <p>
+                Frontend: HTML5, CSS3, JavaScript
+                Backend: Node.js
+                Framework: Express.js, Mongoose
+                Databases: MongoDB
+                Version control: Git, GitHub
+                APIs: Restful APIs
+                Web Development: Responsive Design, Server-side programming, Web Hosting and Deployment
+                Tools and Technologies: Visual Studio Code, Postman.
+            </p>
+        </div>
+        <div class="education">
+            <h5>Education</h5>
+            <div class="bachelor">
+                <p>College: LA GRANDEE International College</p>
+                <span>Program: Bachelor of computer application</span>
+            </div>
+            <div class="higher">
+                <p>College: Moonlight Higher Secondary School</p>
+                <span>Course: 12th Management</span>
+            </div>
+            <div class="slc">
+                <p>School: Shree Nepal Rastriya M.V</p>
+                <span>SLC</span>
+            </div>
+        </div>
+        <div class="connect">
+            <strong>Reach me</strong>
+            <p><img class="gmail-icon" src="./icons/gmail.webp" alt="Gmail icons is loading..">
+                nabinpoudel7882@gmail.com</p>
+            <p><img class="contact-icon" src="./icons/e-contact.webp" alt="contact image is loading..">982665625</p>
+        </div>
+    </section>
+    <!-- about section -->
 
     <!-- project page -->
     <template class="project-items" id="project-template">

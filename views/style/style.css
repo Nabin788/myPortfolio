@@ -449,7 +449,7 @@ iframe {
     flex-wrap: wrap;
 }
 
-h4 {
+.sourceCode h4 {
     font-size: x-large;
     padding: 0.3rem;
     display: none;
@@ -545,66 +545,103 @@ h4 {
     border-radius: 0 0 .5rem 0;
     padding: 1rem;
 }
+/* project-section */
 
-/* project section */
-
-/* 
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    align-items: center;
-}
-
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
-    align-items: center;
-    border-inline: 1px solid whitesmoke;
-    border-block-end: 1px solid whitesmoke;
-    border-radius: 20%;
+/* about-section */
+.about-section {
+    border: 1px solid white;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    flex-wrap: wrap;
 }
 
-.skills h2 {
+.introduction,
+.skills,
+.education,
+.connect {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin: 0.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    backdrop-filter: blur(5rem);
+}
+
+.introduction h3,
+.skills h4 {
+    letter-spacing: normal;
     font-size: xx-large;
-    text-align: center;
-    border-block-end: 1px solid whitesmoke;
-    border-radius: 20%;
-    letter-spacing: 1rem;
-
+    margin: 0;
 }
 
-.front-end {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+.education h5 {
+    font-size: xx-large;
+    padding: 0;
 }
 
-.front-end p {
+.bachelor p,
+.higher p,
+.slc p {
     font-size: x-large;
 }
 
-.skills-img {
-    height: 1rem;
-    margin-right: 0.5rem;
+.bachelor span,
+.higher span,
+.slc span {
+    font-style: italic;
 }
 
-.skills-img:hover {
-    transform: scale(1.2);
+.introduction p,
+.skills p {
+    text-align: justify;
 }
 
-.back-end {
+.introduction p,
+.skills p,
+.bachelor p,
+.higher p,
+.slc p {
+    padding: 0;
+    margin-top: 0;
+}
+
+.connect {
+    padding: 0.5rem;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
 }
 
-.back-end p {
-    font-size: x-large;
+.connect p {
+    margin-block: 0.2rem;
+    padding-left: 2.3rem;
+    position: relative;
+    text-transform: lowercase;
 }
- */
+
+.contact-icon,
+.gmail-icon {
+    cursor: pointer;
+    height: 1.5rem;
+    position: absolute;
+    left: 0.2rem;
+}
+
+.contact-icon:hover,
+.gmail-icon:hover {
+    transform: scale(1.1);
+}
+
+strong {
+    font-size: xx-large;
+    padding-left: 0.2rem;
+}
+
+/* about-section */
 
 .adsbygoogle {
     width: 10rem;

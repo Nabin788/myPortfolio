@@ -8,6 +8,7 @@ const elements = {
     aboutBtn: document.querySelector(".about-btn"),
     contactBtn: document.getElementById("submit-btn"),
     sourceCode: document.querySelector(".sourceCode"),
+    aboutSection: document.getElementById("about-section")
 }
 
 const navbar = (url) => {
@@ -23,11 +24,16 @@ const navbar = (url) => {
     elements.projectSection.style.display = "none";
     elements.contact.style.display = "none";
     elements.home.style.display = "none";
+    elements.aboutSection.style.display = "none";
 
     switch (url) {
         case "/home":
             elements.home.style.display = "grid";
             document.title = "home - Portfolio"
+            break;
+        case "/about":
+            elements.aboutSection.style.display = "flex";
+            document.title = "about - Portfolio"
             break;
         case "/portfolio":
             elements.projectSection.style.display = "block";
