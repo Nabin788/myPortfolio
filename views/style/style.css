@@ -14,12 +14,13 @@ html {
 }
 
 body {
-    font-family: roboto , sans-serif;
+    font-family: roboto, sans-serif;
     text-transform: capitalize;
     color: var(--white-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: black;
     background-image: url(../icons/background.webp);
     background-size: cover;
     background-position: center;
@@ -179,7 +180,6 @@ nav {
 }
 
 h2 {
-    letter-spacing: 0.3rem;
     font-size: xx-large;
 }
 
@@ -217,7 +217,7 @@ h2 {
 
 span {
     display: inline-block;
-    text-align: justify;
+    word-spacing: 0.1rem;
 }
 
 .social-media {
@@ -253,7 +253,8 @@ span {
     color: white;
 }
 
-.about-btn:hover, .visit-btn:hover {
+.about-btn:hover,
+.visit-btn:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -507,8 +508,8 @@ iframe {
 .project-item {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    text-align: justify;
     gap: 1rem;
+    text-align: justify;
     padding: 0.2rem;
     border: 1px solid whitesmoke;
     border-radius: 0.5rem;
@@ -599,11 +600,11 @@ iframe {
     flex-wrap: wrap;
 }
 
-.introduction{
+.introduction {
     position: relative;
 }
 
-.resume-btn{
+.resume-btn {
     color: white;
     cursor: pointer;
     text-decoration: none;
@@ -619,7 +620,7 @@ iframe {
 
 }
 
-.resume-btn:hover{
+.resume-btn:hover {
     border-radius: 0.5rem;
     background-color: rgba(182, 170, 170, 0.1);
     transform: scale(1.1);
@@ -652,8 +653,7 @@ iframe {
 
 .introduction p,
 .skills p {
-    text-align: justify;
-    hyphens: auto;
+    word-spacing: 0.2rem;
 }
 
 .introduction p,
@@ -789,13 +789,14 @@ iframe {
     padding-left: 0.2rem;
 }
 
-.connect .visit-btn{
+.connect .visit-btn {
     position: absolute;
-    cursor: pointer;
     right: 2rem;
     top: 2.5rem;
+    cursor: pointer;
     width: 10rem;
-    padding: 0.5rem;
+    height: 3rem;
+    padding: 1rem;
     border-radius: 0.3rem;
     border: 1px solid white;
     background-color: transparent;
@@ -879,6 +880,10 @@ footer p {
 
     .contact-container {
         gap: 1rem;
+    }
+
+    .connect .visit-btn {
+        top: 0.5rem;
     }
 }
 

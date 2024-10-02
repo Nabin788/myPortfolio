@@ -7,6 +7,7 @@ const elements = {
     contact: document.getElementById("contact"),
     aboutBtn: document.querySelector(".about-btn"),
     contactBtn: document.getElementById("submit-btn"),
+    visitBtn: document.querySelector(".visit-btn"),
     sourceCode: document.querySelector(".sourceCode"),
     aboutSection: document.getElementById("about-section")
 }
@@ -111,6 +112,7 @@ const formValid = () => {
     const submitForm = () => {
         const toast = document.createElement("div");
         toast.classList.add("notify");
+        toast.textContent = "Message submit Sucessfully."
         document.body.appendChild(toast);
     }
 
@@ -118,6 +120,19 @@ const formValid = () => {
 }
 formValid();
 
+const aboutNav = () => {
+    const about = "/about";
+    history.pushState({}, "", about);
+    navbar(about);
+}
+
+const visitProject = () => {
+    const projectVisit = "/portfolio";
+    history.pushState({}, "", projectVisit);
+    navbar(projectVisit);
+}
 
 elements.navlist.addEventListener("click", handleNavbar);
+elements.aboutBtn.addEventListener("click", aboutNav);
+elements.visitBtn.addEventListener("click", visitProject);
 
