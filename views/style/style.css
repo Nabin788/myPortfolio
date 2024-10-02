@@ -883,7 +883,12 @@ footer p {
     }
 
     .connect .visit-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 0.5rem;
+        right: 0.5rem;
+        height: 2rem;
     }
 }
 
