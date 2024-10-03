@@ -9,11 +9,10 @@ const elements = {
     contactBtn: document.getElementById("submit-btn"),
     visitBtn: document.querySelector(".visit-btn"),
     sourceCode: document.querySelector(".sourceCode"),
-    aboutSection: document.getElementById("about-section")
+    aboutSection: document.getElementById("about-section"),
 }
 
 const navbar = (url) => {
-
     // Set the active class based on the current URL
     document.querySelectorAll(".nav-list a").forEach(link => {
         link.classList.remove("active");
@@ -22,27 +21,29 @@ const navbar = (url) => {
         }
     });
 
+    // Hide all sections initially
     elements.projectSection.style.display = "none";
     elements.contact.style.display = "none";
     elements.home.style.display = "none";
     elements.aboutSection.style.display = "none";
 
+    // Display the relevant section based on the URL
     switch (url) {
         case "/home":
             elements.home.style.display = "grid";
-            document.title = "home - Portfolio"
+            document.title = "Home - Portfolio";
             break;
         case "/about":
             elements.aboutSection.style.display = "flex";
-            document.title = "about - Portfolio"
+            document.title = "About - Portfolio";
             break;
         case "/portfolio":
             elements.projectSection.style.display = "block";
-            document.title = "project - Portfolio";
+            document.title = "Projects - Portfolio";
             break;
         case "/contact":
             elements.contact.style.display = "flex";
-            document.title = "contact - Portfolio"
+            document.title = "Contact - Portfolio";
             break;
         default:
             elements.home.style.display = "grid";
@@ -51,7 +52,6 @@ const navbar = (url) => {
 }
 
 const handleNavbar = (event) => {
-
     event.preventDefault();
     const url = event.target.getAttribute('href');
     if (!url) {
@@ -68,7 +68,7 @@ const projectItems = async () => {
     const projectApi = await api.json();
 
     projectApi.forEach(projectData => {
-        const { project, description, image, link } = projectData
+        const { project, description, image, link } = projectData;
 
         const template = document.importNode(elements.projetTemplate.content, true);
         template.querySelector(".project-name").textContent = project;
@@ -80,6 +80,31 @@ const projectItems = async () => {
 }
 projectItems();
 
+const formValid = () => {
+    const userName = document.getElementById("name");
+    const userEmail = document.getElementById("email");
+    const contactBtn = elements.contactBtn;
+
+    const checkValue = () => {
+        const userValue = userName.value;
+        const emailValue = userEmail.value;
+
+        // Show or hide the button based on input values
+        contactBtn.style.display = userValue && emailValue ? "flex" : "none";
+    };
+
+    // Add input event listeners for validation
+    userName.addEventListener("input", checkValue);
+    userEmail.addEventListener("input", checkValue);
+};
+
+formValid();
+
+// Check for 'status' query parameter in the URL
+if (new URLSearchParams(window.location.search).get('status') === 'success') {
+    showToast('Message sent successfully!'); // Show toast if the condition is met
+}
+
 // Handle back/forward navigation with browser buttons
 window.addEventListener("popstate", () => {
     navbar(window.location.pathname);
@@ -89,36 +114,6 @@ window.addEventListener("popstate", () => {
 window.addEventListener("DOMContentLoaded", () => {
     navbar(window.location.pathname);
 });
-
-const formValid = () => {
-    const userName = document.getElementById("name");
-    const userEmail = document.getElementById("email");
-
-    const checkValue = () => {
-
-        const userValue = userName.value;
-        const emailValue = userEmail.value;
-        if (userValue && emailValue) {
-            elements.contactBtn.style.display = "flex";
-        } else {
-            elements.contactBtn.style.display = "none";
-
-        }
-    }
-
-    userName.addEventListener("input", checkValue);
-    userEmail.addEventListener("input", checkValue);
-
-    const submitForm = () => {
-        const toast = document.createElement("div");
-        toast.classList.add("notify");
-        toast.textContent = "Message submit Sucessfully."
-        document.body.appendChild(toast);
-    }
-
-    elements.contactBtn.addEventListener("click", submitForm);
-}
-formValid();
 
 const aboutNav = () => {
     const about = "/about";
@@ -135,4 +130,3 @@ const visitProject = () => {
 elements.navlist.addEventListener("click", handleNavbar);
 elements.aboutBtn.addEventListener("click", aboutNav);
 elements.visitBtn.addEventListener("click", visitProject);
-
