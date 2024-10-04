@@ -17,7 +17,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(compression());
 
-// Serve static files with proper Cache-Control headers
 app.use(express.static("views"));
 
 const port = process.env.PORT || 1000;
