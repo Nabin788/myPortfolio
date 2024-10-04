@@ -123,6 +123,7 @@ nav {
 
 /* home section */
 .home-section {
+    margin-top: auto;
     background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.264), rgba(0, 0, 0, 0.473));
     border: 1px solid white;
     backdrop-filter: blur(1rem);
