@@ -1,7 +1,6 @@
 const express = require("express");
 require("dotenv").config();
 const mail = require("./controller/mail.js");
-const cors = require('cors');
 const compression = require("compression");
 
 const app = express();
@@ -12,7 +11,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(cors({ origin: "*" }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(compression());
