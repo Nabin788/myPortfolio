@@ -9,7 +9,7 @@ const elements = {
     contactBtn: document.getElementById("submit-btn"),
     visitBtn: document.querySelector(".visit-btn"),
     sourceCode: document.querySelector(".sourceCode"),
-    aboutSection: document.getElementById("about-section"),
+    aboutSection: document.getElementById("about-section")
 }
 
 const navbar = (url) => {
@@ -73,6 +73,7 @@ const projectItems = async () => {
         const template = document.importNode(elements.projetTemplate.content, true);
         template.querySelector(".project-name").textContent = project;
         template.querySelector(".project-img").src = image;
+        template.querySelector(".project-img").alt = `Nabin Poudel ${project} Project Screen Shoot.`;
         template.querySelector(".project-link").href = link;
         template.querySelector(".description").textContent = description;
         elements.projectList.append(template);
