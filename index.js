@@ -33,11 +33,9 @@ app.use((req, res, next) => {
 
 app.get("*", (req, res) => {
     const spaRoutes = ["/", "/home", "/about", "/portfolio", "/contact"];
-    const canonicalBase = "https://www.nabin788.com.np";
 
     if (spaRoutes.includes(req.path)) {
-        const canonicalUrl = `${canonicalBase}${req.path}`;
-        res.status(200).render("index", { canonicalUrl });
+        res.status(200).render("index");
     } else {
         res.status(404).send("404 Page not found");
     }

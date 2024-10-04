@@ -32,24 +32,37 @@ const navbar = (url) => {
         case "/home":
             elements.home.style.display = "grid";
             document.title = "Home - Portfolio";
+            updateCanonicalUrl("/home");
             break;
         case "/about":
             elements.aboutSection.style.display = "flex";
             document.title = "About - Portfolio";
+            updateCanonicalUrl("/about");
             break;
         case "/portfolio":
             elements.projectSection.style.display = "block";
             document.title = "Projects - Portfolio";
+            updateCanonicalUrl("/portfolio");
             break;
         case "/contact":
             elements.contact.style.display = "flex";
             document.title = "Contact - Portfolio";
+            updateCanonicalUrl("/contact");
             break;
         default:
             elements.home.style.display = "grid";
             break;
     }
-}
+};
+
+// Function to update the canonical URL dynamically
+const updateCanonicalUrl = (url) => {
+    const canonicalLink = document.getElementById('canonical-link');
+    if (canonicalLink) {
+        canonicalLink.href = `https://www.nabin788.com.np${url}`;
+    }
+};
+
 
 const handleNavbar = (event) => {
     event.preventDefault();
@@ -100,11 +113,6 @@ const formValid = () => {
 };
 
 formValid();
-
-// Check for 'status' query parameter in the URL
-if (new URLSearchParams(window.location.search).get('status') === 'success') {
-    showToast('Message sent successfully!'); // Show toast if the condition is met
-}
 
 // Handle back/forward navigation with browser buttons
 window.addEventListener("popstate", () => {
