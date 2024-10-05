@@ -269,6 +269,7 @@ span {
     flex-direction: column;
     justify-content: space-evenly;
     flex-grow: 1;
+    position: relative;
 }
 
 .resume-btn {
@@ -510,6 +511,7 @@ span {
 .project-container {
     margin-top: 6px;
     display: none;
+    position: relative;
 }
 
 .project-item {
@@ -525,7 +527,6 @@ span {
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: border-left 0.3s linear;
-    position: relative;
 
 }
 
