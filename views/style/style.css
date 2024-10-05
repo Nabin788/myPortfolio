@@ -787,31 +787,6 @@ iframe {
 }
 /* contact-section */
 
-
-/* ads section */
-/* .adsbygoogle {
-    width: 10rem;
-    top: 3rem;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    animation: sliding 5s linear;
-}
-
-@keyframes sliding {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0rem);
-    }
-} */
-
-/* ads section */
-
 /* footer-section */
 footer {
     text-align: center;
