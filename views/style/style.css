@@ -24,7 +24,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(11.8rem, 1fr));
     gap: 0.5rem;
     padding: 0.3rem;
-    border-radius: 0.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -95,7 +95,7 @@ nav {
 
 .nav-list li a {
     display: inline-block;
-    padding: 0.3rem;
+    padding: 0.6rem;
     text-decoration: none;
     color: whitesmoke;
     border-width: 0;
@@ -249,7 +249,8 @@ span {
 }
 
 .about-btn:hover,
-.visit-btn:hover {
+.visit-btn:hover,
+.btn-submit:hover {
     transform: scale(1.1);
     cursor: pointer;
     background-color: #155a8a;
@@ -270,31 +271,31 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 2rem;
-    top: 0.5rem;
+    position: fixed;
+    top: 5.3rem;
+    right: 1.2rem;
     width: 8rem;
-    color: #f4f4f4;;
     cursor: pointer;
     text-decoration: none;
     border: 1px solid white;
-    border-radius: 1rem;
-    padding: 0.2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.5rem;
+    color: #f4f4f4;;
+    background-color:#1d72b8;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+    animation: fadeIn 1.5s ease-in-out;
+
 }
 
 .resume-btn:hover {
-    border-radius: 0.5rem;
-    background-color: rgba(182, 170, 170, 0.1);
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background-color: #1d72b8;
 }
 
-.resume-btn .download-icon {
-    height: 2rem;
+.resume-btn .resume-icon {
+    height: 2.3rem;
     color: black;
-}
-
-.introduction {
-    position: relative;
 }
 
 .introduction,
@@ -492,11 +493,11 @@ span {
     width: 10rem;
     padding: 0.5rem;
     border-radius: 0.3rem;
-    background-color: transparent;
     color: #f4f4f4;;
     align-self: center;
     background-color: #1d72b8;
     transition: background-color 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
 }
 /* about-section */
 
@@ -549,6 +550,7 @@ span {
     height: 10rem;
     border-radius: 1rem;
     cursor: pointer;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .project-img:hover {
@@ -600,7 +602,7 @@ span {
     top: 5.3rem;
     right: 1.2rem;
     height: 3rem;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 0.5rem 0 0 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -611,6 +613,7 @@ span {
     animation: blick 0.5s linear infinite;
     background-color: #1d72b8;
     z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 @keyframes blick {
@@ -723,15 +726,13 @@ span {
     flex-wrap: wrap;
 }
 
-.nameEmail,
-.subject {
+.nameEmail{
     border: 1px solid whitesmoke;
     text-align: center;
     border-radius: 1rem;
     padding: 0.3rem;
     width: 100%;
-    background-color: transparent;
-    color: var(--white-color);
+    border-color: transparent;
 }
 
 textarea {
@@ -741,9 +742,6 @@ textarea {
     padding: 3.5rem;
     height: 10rem;
     width: 100%;
-    background-color: transparent;
-    color: var(--white-color);
-    box-shadow: var(--box-shadow);
 }
 
 .nameEmail::placeholder,
@@ -762,18 +760,13 @@ textarea::placeholder,
     padding: 0.5rem;
     border-radius: 1rem;
     cursor: pointer;
-    background-color: lightblue;
-}
-
-.btn-submit:hover {
-    background-color: rgb(4, 4, 249);
-    transition: transform 0.3s ease;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
 }
 
 #submit-btn {
     display: none;
 }
-
 
 .contact-map {
     display: flex;
@@ -851,8 +844,12 @@ footer {
     }
 
     .sourceCode {
-        top: 8rem;
+        top: 8.3rem;
         width: 5rem;
+    }
+
+    .resume-btn{
+        top: 8.3rem;
     }
 
     .section-contact {
