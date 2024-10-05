@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    padding: 10px;
+    padding: 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -193,6 +193,7 @@ h2 {
 }
 
 @keyframes typing {
+
     0%,
     50% {
         width: 0;
@@ -213,7 +214,9 @@ h2 {
 span {
     color: #666;
     display: inline-block;
-    word-spacing: 0.1rem;
+    text-align: justify;
+    hyphens: auto;
+    text-wrap: wrap;
 }
 
 .social-media {
@@ -243,7 +246,8 @@ span {
     width: 10rem;
     padding: 0.5rem;
     border-radius: 0.3rem;
-    color: #f4f4f4;;
+    color: #f4f4f4;
+    ;
     background-color: #1d72b8;
     transition: background-color 0.3s ease;
 }
@@ -255,6 +259,7 @@ span {
     cursor: pointer;
     background-color: #155a8a;
 }
+
 /* home section */
 
 /* about-section */
@@ -263,7 +268,6 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     flex-grow: 1;
 }
 
@@ -280,8 +284,8 @@ span {
     border: 1px solid white;
     border-radius: 0.5rem 0 0 0.5rem;
     padding: 0.5rem;
-    color: #f4f4f4;;
-    background-color:#1d72b8;
+    color: #f4f4f4;
+    background-color: #1d72b8;
     transition: background-color 0.3s ease;
     z-index: 3;
     animation: fadeIn 1.5s ease-in-out;
@@ -301,7 +305,6 @@ span {
 .introduction,
 .education,
 .skills {
-    border-left: 10px solid #1d72b8;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -333,7 +336,9 @@ span {
 
 .introduction p,
 .skills p {
-    word-spacing: 0.2rem;
+    text-align: justify;
+    hyphens: auto;
+    text-wrap: wrap;
 }
 
 .bachelor p,
@@ -450,7 +455,6 @@ span {
 }
 
 .connect {
-    border-left: 10px solid #1d72b8;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -493,12 +497,13 @@ span {
     width: 10rem;
     padding: 0.5rem;
     border-radius: 0.3rem;
-    color: #f4f4f4;;
+    color: #f4f4f4;
     align-self: center;
     background-color: #1d72b8;
     transition: background-color 0.3s ease;
     animation: fadeIn 1.5s ease-in-out;
 }
+
 /* about-section */
 
 /* project-section */
@@ -508,11 +513,12 @@ span {
 }
 
 .project-item {
-    border-left: 10px solid #1d72b8;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
     text-align: justify;
+    hyphens: auto;
+    text-wrap: wrap;
     margin-bottom: 1rem;
     padding: 0.2rem;
     border-radius: 0 0.5rem 0.5rem 0;
@@ -520,25 +526,27 @@ span {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: border-left 0.3s linear;
     position: relative;
+
 }
 
 .project-item:hover {
     transform: scale(1.01);
 }
 
-.img-name {
+.project-item .img-name {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0.5rem;
     border-radius: 0.5rem 0 0 0;
 }
 
-.project-img-container {
-    overflow: hidden;
+.project-item .project-img-container {
+    padding: 1rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
@@ -573,7 +581,7 @@ span {
     width: 12rem;
     border-radius: 0.3rem;
     text-decoration: none;
-    color: #f4f4f4;;
+    color: #f4f4f4;
     background-color: #1d72b8;
     transition: background-color 0.3s ease;
 }
@@ -593,7 +601,7 @@ span {
     padding: 1rem;
 }
 
-.project-description h3{
+.project-description h3 {
     font-size: 1.5em;
 }
 
@@ -653,6 +661,7 @@ span {
 .source-icon:hover {
     scale: 1.1;
 }
+
 /* project-section */
 
 /* contact-section */
@@ -678,7 +687,7 @@ span {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form{
+.contact-form {
     display: flex;
     flex-wrap: wrap;
     /* width: 50%; */
@@ -696,7 +705,8 @@ span {
     height: 27rem;
     min-width: 100%;
     border: 1px solid white;
-    color: #f4f4f4;;
+    color: #f4f4f4;
+    ;
     background-color: #1d72b8;
 }
 
@@ -726,7 +736,7 @@ span {
     flex-wrap: wrap;
 }
 
-.nameEmail{
+.nameEmail {
     border: 1px solid whitesmoke;
     text-align: center;
     border-radius: 1rem;
@@ -785,6 +795,7 @@ iframe {
     box-shadow: var(--box-shadow);
     flex-grow: 1;
 }
+
 /* contact-section */
 
 /* footer-section */
@@ -793,17 +804,18 @@ footer {
     margin-top: auto;
     padding: 10px;
     background-color: #1d72b8;
-    color: #f4f4f4;;
+    color: #f4f4f4;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.1rem;
 }
 
 /* footer-section */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 370px) {
 
     .nav-list li a {
-        font-size: 0.7rem;
+        font-size: 0.79rem;
+        font-weight: bolder;
     }
 
     .my-img {
@@ -823,21 +835,42 @@ footer {
         transition: transform 0.3s ease;
     }
 
-    .sourceCode {
-        top: 8.3rem;
-        width: 5rem;
-    }
-
-    .resume-btn{
-        top: 8.3rem;
-    }
-
     .section-contact {
         padding: 1rem;
     }
 
     .contact-container {
         gap: 1rem;
+    }
+
+    /* about-section */
+    .resume-btn {
+        top: 11rem;
+        padding: 0.1rem;
+    }
+
+    .introduction h2,
+    .skills h3,
+    .education h4,
+    .connect .reach-visit h5 {
+        font-size: 1.7em;
+    }
+
+    .bachelor p,
+    .higher p,
+    .slc p {
+        font-size: large;
+    }
+
+    .bachelor span,
+    .higher span,
+    .slc span {
+        font-size: 0.8rem;
+    }
+
+    .connect .reach-visit p {
+        padding-left: 2rem;
+        font-size: 0.9rem;
     }
 
     .connect .visit-btn {
@@ -848,12 +881,58 @@ footer {
         right: 0.5rem;
         height: 2rem;
     }
-    
+
+    /* about-section */
+
+    /* project-section */
+    .project-item {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .project-name {
+        font-size: 1.7em;
+    }
+
+    .project-description h3 {
+        font-size: 1.4em;
+    }
+
+    .project-img-container img {
+        height: 7rem;
+    }
+
+    .sourceCode {
+        top: 12rem;
+        width: 5rem;
+        padding: 0.1rem;
+    }
+
+    .sourceCode:hover {
+        width: 15rem;
+    }
+
+    .sourceCode h4 {
+        font-size: 1.3rem;
+    }
+
+    /* project-section */
+
+    footer {
+        font-size: 0.9rem;
+    }
+
 }
 
-@media only screen and (max-width: 1240px) {
-    .adsbygoogle {
-        width: 10rem;
-        top: 33rem;
+@media only screen and (max-width: 800px) {
+    .my-img {
+        border-right: 0;
+    }
+
+    .resume-btn {
+        top: 8rem;
+    }
+
+    .sourceCode {
+        top: 8rem;
     }
 }
