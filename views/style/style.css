@@ -95,11 +95,13 @@ nav {
 }
 
 .nav-list {
+    height: 3rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .nav-list li {
@@ -834,7 +836,7 @@ footer {
 @media only screen and (max-width: 370px) {
 
     .nav-list li a {
-        font-size: 0.79rem;
+        font-size: 0.739rem;
         font-weight: bolder;
     }
 
@@ -865,7 +867,7 @@ footer {
 
     /* about-section */
     .resume-btn {
-        top: 7.5rem;
+        top: 8.4rem;
         padding: 0.1rem;
     }
 
@@ -922,7 +924,7 @@ footer {
     }
 
     .sourceCode {
-        top: 7.5rem;
+        top: 8.4rem;
         width: 5rem;
         padding: 0.1rem;
     }
