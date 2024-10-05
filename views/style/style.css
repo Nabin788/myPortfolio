@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    padding: 20px;
+    padding: 10px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ nav {
 
 .nav-list li a {
     display: inline-block;
-    padding: 0.6rem;
+    padding: 0.5rem;
     text-decoration: none;
     color: whitesmoke;
     border-width: 0;
@@ -801,6 +801,11 @@ footer {
 /* footer-section */
 
 @media only screen and (max-width: 500px) {
+
+    .nav-list li a {
+        font-size: 0.7rem;
+    }
+
     .my-img {
         border-right: 0rem solid white;
         border-radius: 0rem;
