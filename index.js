@@ -22,7 +22,7 @@ const port = process.env.PORT || 1000;
 app.set("view engine", "hbs");
 
 // Endpoint for sending mail
-app.post("/send", mail);
+app.post("/send", mail());
 
 
 // Middleware to set Cache-Control for dynamic routes (HTML pages)
