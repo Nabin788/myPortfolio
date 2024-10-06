@@ -15,7 +15,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(compression());
 
-app.use(express.static("views"));
+app.use(express.static("views", {
+    setHeader: (res)=>{
+        res.setHeader('X-Content-Type-Options', 'nosniff');
+    }
+}));
 
 const port = process.env.PORT || 1000;
 
