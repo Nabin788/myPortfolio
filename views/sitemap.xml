@@ -6,37 +6,35 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://www.nabin788.com.np/</loc>
-  <lastmod>2024-10-04T04:59:37+00:00</lastmod>
+  <lastmod>2024-10-06T05:09:35+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.nabin788.com.np/home</loc>
-  <lastmod>2024-10-04T04:59:37+00:00</lastmod>
+  <lastmod>2024-10-06T05:09:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nabin788.com.np/about</loc>
-  <lastmod>2024-10-04T04:59:37+00:00</lastmod>
+  <lastmod>2024-10-06T05:09:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nabin788.com.np/portfolio</loc>
-  <lastmod>2024-10-04T04:59:37+00:00</lastmod>
+  <lastmod>2024-10-06T05:09:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nabin788.com.np/contact</loc>
-  <lastmod>2024-10-04T04:59:37+00:00</lastmod>
+  <lastmod>2024-10-06T05:09:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nabin788.com.np/icons/NabinCV.pdf</loc>
-  <lastmod>2024-10-04T04:37:36+00:00</lastmod>
+  <lastmod>2024-10-06T03:33:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>
