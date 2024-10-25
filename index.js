@@ -21,7 +21,7 @@ app.use(express.static("views", {
     }
 }));
 
-const port = process.env.PORT || 1000;
+const port = process.env.PORT || 5000;
 
 app.set("view engine", "hbs");
 
