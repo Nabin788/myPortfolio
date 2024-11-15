@@ -355,6 +355,7 @@ span {
     text-wrap: wrap;
 }
 
+.master p,
 .bachelor p,
 .higher p,
 .slc p {
@@ -446,6 +447,7 @@ span {
     color: #333;
 }
 
+.master,
 .bachelor,
 .higher,
 .slc {
@@ -455,6 +457,7 @@ span {
     background-color: #1d72b8;
 }
 
+.master p,
 .bachelor p,
 .higher p,
 .slc p {
@@ -462,11 +465,18 @@ span {
     font-size: x-large;
 }
 
+.master span,
 .bachelor span,
 .higher span,
 .slc span {
     font-style: italic;
     color: #f4f4f4;
+}
+
+.program{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .connect {
@@ -877,6 +887,7 @@ footer {
         font-size: 1.7em;
     }
 
+    .master p,
     .bachelor p,
     .higher p,
     .slc p {
