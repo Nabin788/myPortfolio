@@ -103,6 +103,13 @@ const formValid = () => {
         const userValue = userName.value;
         const emailValue = userEmail.value;
 
+        const nameValue = userName.value.trim();
+
+        if (nameValue === "") {
+          alert("Please enter a valid name.");
+         return nameInput.focus();
+        }
+
         // Show or hide the button based on input values
         contactBtn.style.display = userValue && emailValue ? "flex" : "none";
     };
