@@ -8,24 +8,24 @@
     },
     {
         "id": 2,
-        "project": "Gradient Generator",
-        "description": "Gradient Generator using HTML, CSS, and JavaScript that allows users to create and customize beautiful gradients effortlessly. The application features an intuitive user interface where users can select multiple colors and preview the gradient in real-time. With the ability to copy the CSS code for the generated gradients, users can easily implement their designs into web projects.",
-        "image": "./projects-img/gradient.png",
-        "link": "https://nabin788.github.io/gradientGenerator/"
-    },
-    {
-        "id": 3,
         "project": "full User Authentication System",
         "description": "Developed a full user authentication system using Node.js, Express.js, and MongoDB, featuring secure user registration, login, and password management. Implemented bcrypt for password hashing and JSON Web Tokens (JWT) for token-based authentication. Enhanced user experience with a password reset feature using Nodemailer.",
         "image": "./projects-img/authProject.webp",
         "link": "https://github.com/Nabin788/BackEnd-Training/tree/master/backend-project/project-auth"
     },
     {
-        "id": 4,
+        "id": 3,
         "project": "Food Ordering System",
         "description": "This backend food ordering system is built with Node.js, Express, and MongoDB, providing a seamless platform for managing food orders. It includes features such as user registration, authentication, order management, menu item management, and real-time status updates. The system ensures smooth communication between customers and restaurant admins, providing secure and efficient handling of food orders. The RESTful API is designed for scalability and easy integration with front-end applications.",
         "image": "./projects-img/FB.webp",
         "link": "https://github.com/lgic-project/FB/tree/master/Backend"
+    },
+    {
+        "id": 4,
+        "project": "Gradient Generator",
+        "description": "Gradient Generator using HTML, CSS, and JavaScript that allows users to create and customize beautiful gradients effortlessly. The application features an intuitive user interface where users can select multiple colors and preview the gradient in real-time. With the ability to copy the CSS code for the generated gradients, users can easily implement their designs into web projects.",
+        "image": "./projects-img/gradient.png",
+        "link": "https://nabin788.github.io/gradientGenerator/"
     },
     {
         "id": 5,
