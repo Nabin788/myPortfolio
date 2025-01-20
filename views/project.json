@@ -8,7 +8,7 @@
     },
     {
         "id": 2,
-        "project": "full User Authentication System",
+        "project": "User Authentication System",
         "description": "Developed a full user authentication system using Node.js, Express.js, and MongoDB, featuring secure user registration, login, and password management. Implemented bcrypt for password hashing and JSON Web Tokens (JWT) for token-based authentication. Enhanced user experience with a password reset feature using Nodemailer.",
         "image": "./projects-img/authProject.webp",
         "link": "https://github.com/Nabin788/BackEnd-Training/tree/master/backend-project/project-auth"
@@ -29,7 +29,7 @@
     },
     {
         "id": 5,
-        "project": "khanal Shop",
+        "project": "Khanal Shop",
         "description": "KhanaShop, a dynamic e-commerce application using HTML, CSS, and JavaScript that enhances the online shopping experience for mobile products. The project features a JSON file that contains detailed data about mobile items, including product names, prices, images, and descriptions. This data is fetched dynamically and displayed in the app, allowing for easy updates and management. Users can browse through the product listings, add items to their shopping cart, and adjust quantities in real-time. The application incorporates responsive design principles to ensure a seamless user experience across different devices.",
         "image": "./projects-img/khanal.png",
         "link": "https://nabin788.github.io/khanalShop/"
@@ -43,7 +43,7 @@
     },
     {
         "id": 7,
-        "project": "nodejs Weather App",
+        "project": "Node.js Weather App",
         "description": "Weather App using Node.js and Handlebars that provides users with real-time weather information based on their location. The application features a user-friendly interface where users can enter their city name to retrieve current weather data, including temperature, humidity, and weather conditions. Leveraging API integration for reliable weather data, the app displays the information in a visually appealing format.",
         "image": "./projects-img/weather.png",
         "link": "https://nodeweather-app.onrender.com"
