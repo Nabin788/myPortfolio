@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    
+
     ::-webkit-scrollbar {
         width: 0.5rem;
     }
@@ -30,6 +30,38 @@ body {
     color: #333;
     font-family: roboto, sans-serif;
 }
+
+/* dark mode */
+
+.darkmode-btn{
+    position: fixed;
+    z-index: 100;
+    top: 2.5rem;
+    left: 0.2rem;
+    overflow: hidden;
+    border: none;
+    border-radius: 10rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.mode-icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    transition: transform 0.5s ease;
+    animation: blick 1s linear infinite;
+    transition: transform 0.5s ease;
+}
+
+.mode-icon:hover{
+    transform: scale(1.3);
+
+}
+
+
+/* dark mode */
+
 
 /* header */
 header {
@@ -203,18 +235,16 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    animation: typing 20s steps(60) 0.1s infinite alternate, blink-caret 0.2s step-start infinite;
+    animation: typing 3s steps(30) 0.1s infinite alternate, blink-caret 0.2s step-start infinite;
 }
 
 @keyframes typing {
 
-    0%,
-    50% {
+    0%{
         width: 0;
     }
 
-    25%,
-    75% {
+    100% {
         width: 16ch;
     }
 }
@@ -473,7 +503,7 @@ span {
     color: #f4f4f4;
 }
 
-.program{
+.program {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
