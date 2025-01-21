@@ -1042,6 +1042,40 @@ footer {
 
 }
 
+@media only screen and (max-width: 550px) {
+
+    /* about-section */
+    .resume-btn {
+        top: 8.2rem;
+        right: 0.2rem;
+        padding: 0.1rem;
+        height: 2rem; 
+        width: 6rem;
+    }
+
+    .resume-btn .resume-icon {
+        height: 1.5rem;
+        color: black;
+    }
+
+    .sourceCode {
+        top: 8.2rem;
+        right: 0.2rem;
+        padding: 0.1rem;
+        height: 2rem; 
+        width: 4rem;
+    }
+
+    .sourceCode:hover {
+        width: 15rem;
+    }
+
+    .sourceCode h4 {
+        font-size: 1.3rem;
+    }
+    
+}
+
 @media only screen and (max-width: 800px) {
     .my-img {
         border-right: 0;
