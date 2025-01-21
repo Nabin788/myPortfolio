@@ -10,65 +10,29 @@ const elements = {
     visitBtn: document.querySelector(".visit-btn"),
     sourceCode: document.querySelector(".sourceCode"),
     aboutSection: document.getElementById("about-section"),
-    darkModeBtn: document.querySelector(".darkmode-btn")
 }
 
+// darkmode
+let darkmode = localStorage.getItem("darkmode");
+const themSwitch = document.getElementById("theme-switch");
 
-// Helper function to apply background and text colors
-const applyModeStyles = (section, bgColor, textColor, borderColor) => {
-    section.style.backgroundColor = bgColor;
-    section.style.color = textColor;
-    section.querySelectorAll("h2, h3, h4, h5").forEach(h => h.style.color = textColor);
-    section.querySelectorAll("h2, h3, h4").forEach(h => h.style.borderBottom = `1px solid ${borderColor}`);
-    section.querySelectorAll("p").forEach(p => p.style.color = textColor);
-};
+const enableDarkmode = () => {
+    document.body.classList.add("darkmode");
+    localStorage.setItem("darkmode", "active");
+}
 
-// Function to toggle dark mode
-const darkMode = () => {
-    const modeIcon = document.querySelector(".mode-icon");
-    const isDarkMode = modeIcon.src.includes("sun.webp");
+const disabledDarkmode = () => {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem("darkmode", null);
+}
 
-    const modeStyles = isDarkMode ? {
-        bgColor: "black", textColor: "white", borderColor: "white", icon: "../icons/moon.webp", alt: "dark mode icon",
-        sectionBgColor: "#333", sectionTextColor: "white", sectionBorderColor: "white", bodyBgColor: "black", localStorageValue: "enabled"
-    } : {
-        bgColor: "#f4f4f4", textColor: "#333", borderColor: "black", icon: "../icons/sun.webp", alt: "light mode icon",
-        sectionBgColor: "white", sectionTextColor: "#333", sectionBorderColor: "black", bodyBgColor: "#f4f4f4", localStorageValue: "disabled"
-    };
+if(darkmode === "active") enableDarkmode();
 
-    modeIcon.src = modeStyles.icon;
-    modeIcon.alt = modeStyles.alt;
-    document.body.style.backgroundColor = modeStyles.bodyBgColor;
-
-    // Apply styles to sections
-    document.querySelector("#about-section").querySelectorAll(".introduction, .skills, .education, .connect").forEach(section => 
-        applyModeStyles(section, modeStyles.sectionBgColor, modeStyles.sectionTextColor, modeStyles.sectionBorderColor)
-    );
-
-    // Apply styles to project items
-    document.querySelectorAll(".project-item").forEach(projectItem => {
-        applyModeStyles(projectItem.querySelector(".project-description"), modeStyles.sectionBgColor, modeStyles.sectionTextColor, modeStyles.sectionBorderColor);
-    });
-
-    // Header and other specific elements
-    document.querySelector("header").style.backgroundColor = modeStyles.sectionBgColor;
-    document.querySelector("header").querySelector("h1").style.color = modeStyles.sectionTextColor;
-    document.querySelector(".info").querySelector("p").style.color = modeStyles.sectionTextColor;
-    document.querySelector(".info").querySelector(".textTyping").style.color = modeStyles.sectionTextColor;
-    document.querySelector(".myShort-description").querySelector("span").style.color = modeStyles.sectionTextColor;
-    document.querySelector(".contact-container").style.backgroundColor = modeStyles.sectionBgColor;
-
-    localStorage.setItem("darkMode", modeStyles.localStorageValue);
-};
-
-// Function to apply the saved mode on page load
-const applySavedMode = () => {
-    const darkModeStatus = localStorage.getItem("darkMode");
-    if (darkModeStatus === "enabled") darkMode();
-};
-
-// Apply saved mode when the page loads
-document.addEventListener("DOMContentLoaded", applySavedMode);
+themSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem("darkmode")
+    darkmode !== "active" ? enableDarkmode() : disabledDarkmode();
+});
+// darkmode
 
 const navbar = (url) => {
     // Set the active class based on the current URL
@@ -120,7 +84,6 @@ const updateCanonicalUrl = (url) => {
         canonicalLink.href = `https://www.nabin788.com.np${url}`;
     }
 };
-
 
 const handleNavbar = (event) => {
     event.preventDefault();
@@ -204,5 +167,4 @@ const visitProject = () => {
 elements.navlist.addEventListener("click", handleNavbar);
 elements.aboutBtn.addEventListener("click", aboutNav);
 elements.visitBtn.addEventListener("click", visitProject);
-elements.darkModeBtn.addEventListener("click", darkMode);
 

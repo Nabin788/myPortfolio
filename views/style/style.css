@@ -21,45 +21,97 @@ html {
     }
 }
 
+:root {
+    --theme-switch: rgba(0, 0, 0, 0.905);
+    --box-shadow: 10rem 0 50rem rgba(245, 222, 179, 0.142);
+    --body-backgroundColor: #f4f4f4;
+    --body-color: #333;
+    --header-backgroundColor : rgb(255, 255, 255);
+    --profile-h1-color : #333;
+    --info-p-color : #555454;
+    --myShort-description-color : #666;
+    --aboutme-container-backgroundColor : #fff;
+    --aboutme-container-h-color : #333;
+    --aboutme-container-h-borderColor : 1px solid black;
+    --education-h4-color: #333;
+    --connect-backgroundColor: #fff;
+    --connect-p-color: black; 
+    --project-item-bacgroundColor: #ffffff;
+    --project-item-h3-color: black;
+    --project-item-p-color: #333;
+    --contact-backgroundColor: white;
+}
+
 body {
     padding: 0 20px 0 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--body-backgroundColor);
+    color: var(--body-color);
     font-family: roboto, sans-serif;
 }
 
 /* dark mode */
 
-.darkmode-btn{
-    position: fixed;
-    z-index: 100;
-    top: 2.5rem;
-    left: 0.2rem;
-    overflow: hidden;
+#theme-switch{
+    height: 3.8rem;
+    width: 1.5rem;
+    border-radius: 0 0.2rem 0.2rem 0rem;
+    padding: 0;
+    background-color: var(--theme-switch);
     border: none;
-    border-radius: 10rem;
-    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 4.6rem;
+    left: 0.1rem;
     cursor: pointer;
-}
-
-.mode-icon {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 1.5rem;
-    transition: transform 0.5s ease;
-    animation: blick 1s linear infinite;
-    transition: transform 0.5s ease;
-}
-
-.mode-icon:hover{
-    transform: scale(1.3);
-
+    z-index: 100;
 }
 
 
+#theme-switch svg{
+    fill: rgb(244, 243, 240);
+}
+
+svg:hover{
+    scale: 1.1;
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+.darkmode {
+    --theme-switch: rgba(255, 255, 255, 0.675);
+    --box-shadow: none;
+    --body-backgroundColor: #0b0b0b;
+    --body-color: #cccccc;
+    --header-backgroundColor: rgb(0, 0, 0);
+    --profile-h1-color: #cccccc;
+    --info-p-color: #aaa5ab; 
+    --myShort-description-color: #999;
+    --aboutme-container-backgroundColor: #000;
+    --aboutme-container-h-color: #cccccc;
+    --aboutme-container-h-borderColor: 1px solid white;
+    --education-h4-color: #cccccc;
+    --connect-backgroundColor: #000;
+    --connect-p-color: white; 
+    --project-item-bacgroundColor: #000000;
+    --project-item-h3-color: white; 
+    --project-item-p-color: #cccccc;
+    --contact-backgroundColor: black;
+}
 /* dark mode */
 
 
@@ -70,7 +122,7 @@ header {
     gap: 0.5rem;
     padding: 0.3rem;
     border-radius: 0.2rem;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--header-backgroundColor);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -115,7 +167,7 @@ header {
 
 .profile h1 {
     font-size: 2.5em;
-    color: #333;
+    color: var(--profile-h1-color);
 }
 
 nav {
@@ -182,7 +234,7 @@ nav {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     border-right: 1.1rem solid #1d72b8;
-    box-shadow: 10rem 0 50rem rgba(245, 222, 179, 0.142);
+    box-shadow: var(--box-shadow);
     position: relative;
 }
 
@@ -226,7 +278,7 @@ h2 {
 }
 
 .info p {
-    color: #555454;
+    color: var(--info-p-color);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -256,7 +308,7 @@ h2 {
 }
 
 span {
-    color: #666;
+    color: var(--myShort-description-color);
     display: inline-block;
     text-align: justify;
     hyphens: auto;
@@ -354,7 +406,7 @@ span {
     gap: 0.5rem;
     margin-bottom: 1rem;
     border-radius: 0.3rem;
-    background-color: #fff;
+    background-color: var(--aboutme-container-backgroundColor);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -370,11 +422,11 @@ span {
 .introduction h2,
 .skills h3,
 .education h4 {
-    border-bottom: 1px solid black;
+    border-bottom: var(--aboutme-container-h-borderColor);
     border-radius: 0.1rem;
     letter-spacing: normal;
     font-size: 2em;
-    color: #333;
+    color: var(--aboutme-container-h-color);
     margin: 0;
 }
 
@@ -383,16 +435,6 @@ span {
     text-align: justify;
     hyphens: auto;
     text-wrap: wrap;
-}
-
-.master p,
-.bachelor p,
-.higher p,
-.slc p {
-    color: #333;
-    font-size: 1.1rem;
-    padding: 0;
-    margin-top: 0;
 }
 
 .skills .skills-list {
@@ -474,7 +516,7 @@ span {
 .education h4 {
     padding: 0;
     font-size: 2em;
-    color: #333;
+    color: var(--education-h4-color);
 }
 
 .master,
@@ -517,7 +559,7 @@ span {
     margin-bottom: 1rem;
     border-radius: 0.3rem;
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--connect-backgroundColor);
 }
 
 .connect .reach-visit h5 {
@@ -527,7 +569,7 @@ span {
 }
 
 .connect .reach-visit p {
-    color: black;
+    color: var(--connect-p-color);
     padding-left: 2.3rem;
     position: relative;
     text-transform: lowercase;
@@ -584,7 +626,7 @@ span {
     margin-bottom: 1rem;
     padding: 0.2rem;
     border-radius: 0.3rem;
-    background-color: #ffffff;
+    background-color: var(--project-item-bacgroundColor);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -656,7 +698,12 @@ span {
 }
 
 .project-description h3 {
+    color: var(--project-item-h3-color);
     font-size: 1.5em;
+}
+
+.project-description .description{
+    color: var(--project-item-p-color);
 }
 
 .sourceCode {
@@ -732,7 +779,7 @@ span {
 .contact-container {
     margin-top: 6px;
     margin-bottom: 6px;
-    background-color: white;
+    background-color: var(--contact-backgroundColor);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -872,7 +919,7 @@ footer {
 
 /* footer-section */
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 390px) {
 
     .nav-list li a {
         font-size: 0.739rem;
@@ -906,8 +953,16 @@ footer {
 
     /* about-section */
     .resume-btn {
-        top: 8.4rem;
+        top: 8.2rem;
+        right: 0.2rem;
         padding: 0.1rem;
+        height: 2rem; 
+        width: 6rem;
+    }
+
+    .resume-btn .resume-icon {
+        height: 1.5rem;
+        color: black;
     }
 
     .introduction h2,
@@ -964,9 +1019,11 @@ footer {
     }
 
     .sourceCode {
-        top: 8.4rem;
-        width: 5rem;
+        top: 8.2rem;
+        right: 0.2rem;
         padding: 0.1rem;
+        height: 2rem; 
+        width: 4rem;
     }
 
     .sourceCode:hover {
@@ -976,7 +1033,7 @@ footer {
     .sourceCode h4 {
         font-size: 1.3rem;
     }
-
+    
     /* project-section */
 
     footer {
