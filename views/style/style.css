@@ -93,7 +93,7 @@ svg:hover{
 }
 
 .darkmode {
-    --theme-switch: rgba(255, 255, 255, 0.675);
+    --theme-switch: rgba(26, 24, 24, 0.327);
     --box-shadow: none;
     --body-backgroundColor: #0b0b0b;
     --body-color: #cccccc;
