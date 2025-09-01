@@ -1,4 +1,11 @@
 [
+  {
+        "id": 1,
+        "project": "Portfolio Website",
+        "description": "Personal portfolio website using HTML, CSS, JavaScript, and node.js. Showcased personal projects, skills, and contact information. Implemented responsive design to ensure compatibility with various devices.",
+        "image": "./projects-img/portfolioWebsite.webp",
+        "link": "https://www.nabin788.com.np"
+    },
     {
         "id": 2,
         "project": "User Authentication System",
