@@ -1,12 +1,5 @@
 [
     {
-        "id": 1,
-        "project": "Portfolio Website",
-        "description": "Personal portfolio website using HTML, CSS, JavaScript, and node.js. Showcased personal projects, skills, and contact information. Implemented responsive design to ensure compatibility with various devices.",
-        "image": "./projects-img/portfolioWebsite.webp",
-        "link": "https://www.nabin788.com.np"
-    },
-    {
         "id": 2,
         "project": "User Authentication System",
         "description": "Developed a full user authentication system using Node.js, Express.js, and MongoDB, featuring secure user registration, login, and password management. Implemented bcrypt for password hashing and JSON Web Tokens (JWT) for token-based authentication. Enhanced user experience with a password reset feature using Nodemailer.",
